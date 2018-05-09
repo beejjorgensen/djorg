@@ -4,6 +4,6 @@ from .models import Bookmark
 def index(request):
 	context = {}
 
-	# TODO: biz logic
+	context['bookmarks'] = Bookmark.objects.all()
 
 	return render(request, 'bookmarks/index.html', context)
